@@ -64,7 +64,7 @@ HiDT requires **two Hi-C files** in `.hic` format representing the two condition
 > **Tip:** Using `intra` mode is strongly recommended to improve runtime.
 
 - If your Hi-C data is not in `.hic` format (e.g., `.cool`), you can convert it using [hictk](https://github.com/paulsengroup/hictk) or other tools before running HiDT.
-## Quick start
+## Quick Start
 First, download the testdata folder from our GitHub repository. It contains example data:
 
 - `Cortical_L2_5_Pyramidal_Cell.hic` and `Cortical_L6_Pyramidal_Cell.hic`: pseudo-bulk Hi-C data for two mouse brain cell subtypes
