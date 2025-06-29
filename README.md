@@ -46,7 +46,7 @@ If you **have** CUDA installed (GPU version), you need to select the CUDA versio
                        (default: intra)
    --output OUTPUT      Path to the output result file. (default: None)
    ```
-## HiDT Input Requirements
+## Input Requirements
 
 HiDT requires **two Hi-C files** in `.hic` format representing the two conditions you need to compare, and a **TAD file** specifying the domains to analyze.
 
