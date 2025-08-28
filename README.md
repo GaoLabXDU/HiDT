@@ -1,7 +1,7 @@
 # HiDT
 **Robust identification of differential topologically associating domains from three-dimensional genome maps.**  
 We present HiDT, a graph neural network-based algorithm with an attention-based, edge-enhanced layer to capture structural differences between TAD graphs. HiDT integrates a depth-specific normalization module and is trained across diverse sequencing depths, enabling robust detection of differential TADs under sparse conditions. Comprehensive benchmarking demonstrates that HiDT consistently outperforms existing methods at both TAD and sub-TAD levels, maintaining accuracy even in datasets with only a few million contacts. By overcoming the limitations of sparse data, HiDT enabled analyses previously difficult in low-coverage datasets. Specifically, we applied it to map TAD reorganization linked to oncogene dysregulation during tumor progression, profile differential TADs associated with transcriptional heterogeneity among cell subtypes in single-cell Hi-C data, and define haplotype-specific TADs associated with allele-specific structural variations.
-![MainPage](image/mainpage.png)
+![MainPage](images/mainpage.png)
 # Installation
 ## Install HiDT
 HiDT and the dependencies can be installed using pip:
