@@ -46,7 +46,7 @@ HiDT provides two command-line entry points:
 
    ```text
    $ runHiDT
-   usage: HiDT [-h] [--hicfile1 HICFILE1] [--hicfile2 HICFILE2]
+   usage: runHiDT [-h] [--hicfile1 HICFILE1] [--hicfile2 HICFILE2]
             [--TADfile TADFILE] [--res RES] [--depth DEPTH] [--output OUTPUT]
 
    Identify differential TADs from Hi-C contact maps.
