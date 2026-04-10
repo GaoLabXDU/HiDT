@@ -117,6 +117,9 @@ TADs with a **score > 1** are identified as differential TADs.
 ## Datasets
 All datasets used in HiDT are available at **Zenodo**: [https://doi.org/10.5281/zenodo.19484913](https://doi.org/10.5281/zenodo.19484913).
 
+## Issues
+If you have any questions about HiDT, please feel free to leave a message in the GitHub **Issues** section.
+
 
 
 
