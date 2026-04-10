@@ -103,6 +103,7 @@ $ runHiDT --hicfile1 /path/to/testdata/Cortical_L2_5_Pyramidal_Cell.hic \
           --TADfile /path/to/testdata/Cortical_L2_5_Pyramidal_Cell.bed \
           --res 50000 \
           --output /path/to/output_results.txt
+```
 ## Output
 The HiDT output file contains four columns:
 
