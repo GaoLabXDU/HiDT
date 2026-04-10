@@ -17,6 +17,7 @@ For user reference:
   - **low-sequencing-depth colorectal cancer samples**
 
 ![MainPage](images/mainpage.png)
+
 # Installation
 ## Install HiDT
 HiDT and the dependencies can be installed using pip:
@@ -45,7 +46,9 @@ If you **have** CUDA installed (GPU version), you need to select the CUDA versio
 HiDT provides two command-line entry points:
 - `runHiDT`: uses the original pretrained HiDT model trained on **GM12878** and **K562** Hi-C data.
 - `runHiDT_v2`: uses the **HiDT_v2** pretrained model, which was trained on **H1** and **HFFc6** data using a **cross-assay training strategy**.
+
 **All inputs are identical for the two commands.**
+
    ```text
    $ runHiDT
    usage: runHiDT [-h] [--hicfile1 HICFILE1] [--hicfile2 HICFILE2]
