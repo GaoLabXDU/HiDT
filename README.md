@@ -5,14 +5,16 @@ It is particularly recommended for **sparse chromatin contact maps**, especially
 - **low-sequencing-depth Hi-C data**
 - **pseudo-bulk contact maps**
 
-HiDT can achieve robust performance even under low-coverage conditions, such as:
-- about **5 million intra-chromosomal reads at 25 kb resolution**
-- about **1 million intra-chromosomal reads at 50 kb resolution**
+For user reference:
 
-For user reference, we have applied HiDT in several representative scenarios, including:
-- **GM12878 haplotype comparisons**
-- **cell subtype comparisons**
-- **low-sequencing-depth colorectal cancer samples**
+- **Benchmarking**
+  - reliable performance on contact maps with approximately **5 million intra-chromosomal reads at 25 kb resolution**
+  - reliable performance on contact maps with approximately **1 million intra-chromosomal reads at 50 kb resolution**
+
+- **Representative applications**
+  - **GM12878 haplotype comparisons**
+  - **cell subtype comparisons**
+  - **low-sequencing-depth colorectal cancer samples**
 
 ![MainPage](images/mainpage.png)
 # Installation
