@@ -1,5 +1,5 @@
 # HiDT
-**Robust identification of differential topologically associating domains from three-dimensional genome maps.**  
+**Identification of differential topologically associating domains from low sequencing depth and pseudo-bulk chromatin contact maps.**  
 We present HiDT, a graph neural network-based algorithm with an attention-based, edge-enhanced layer to capture structural differences between TAD graphs. HiDT integrates a depth-specific normalization module and is trained across diverse sequencing depths, enabling robust detection of differential TADs under sparse conditions. Comprehensive benchmarking demonstrates that HiDT consistently outperforms existing methods at both TAD and sub-TAD levels, maintaining accuracy even in datasets with only a few million contacts. By overcoming the limitations of sparse data, HiDT enabled analyses previously difficult in low-coverage datasets. Specifically, we applied it to map TAD reorganization linked to oncogene dysregulation during tumor progression, profile differential TADs associated with transcriptional heterogeneity among cell subtypes in single-cell Hi-C data, and define haplotype-specific TADs associated with allele-specific structural variations.
 ![MainPage](images/mainpage.png)
 # Installation
@@ -23,9 +23,16 @@ If you **have** CUDA installed (GPU version), you need to select the CUDA versio
    ```text
    $ pip install torch==1.13.1+cu117 -f https://download.pytorch.org/whl/torch_stable.html
    ```
+
 # HiDT Usage
+
+## Available commands
+HiDT provides two command-line entry points:
+- `runHiDT`: uses the original pretrained HiDT model trained on **GM12878** and **K562** Hi-C data.
+- `runHiDT_v2`: uses the **HiDT_v2** pretrained model, which was trained on **H1** and **HFFc6** data using a **cross-assay training strategy**.
+
    ```text
-   $ HiDT
+   $ runHiDT
    usage: HiDT [-h] [--hicfile1 HICFILE1] [--hicfile2 HICFILE2]
             [--TADfile TADFILE] [--res RES] [--depth DEPTH] [--output OUTPUT]
 
@@ -65,17 +72,18 @@ HiDT requires **two Hi-C files** in `.hic` format representing the two condition
 
 - If your Hi-C data is not in `.hic` format (e.g., `.cool`), you can convert it using [hictk](https://github.com/paulsengroup/hictk) or other tools before running HiDT.
 ## Quick Start
-First, download the testdata folder from [our GitHub repository](https://github.com/GaoLabXDU/HiDT/tree/main/testdata). It contains example data:
+The pip package includes example data in the `testdata` directory. It contains example data:
 
 - `Cortical_L2_5_Pyramidal_Cell.hic` and `Cortical_L6_Pyramidal_Cell.hic`: pseudo-bulk Hi-C data for two mouse brain cell subtypes
 
 - `Cortical_L2_5_Pyramidal_Cell.bed`: a corresponding TAD file
 
-Then, use HiDT to identify differential TADs by running the following command:
+You can use these files directly to test HiDT by running the following command:
+
 ```text
-    $ HiDT --hicfile1 /path/to/testdata/Cortical_L2_5_Pyramidal_Cell.hic \
-           --hicfile2 /path/to/testdata/Cortical_L6_Pyramidal_Cell.hic \
-           --TADfile /path/to/testdata/Cortical_L2_5_Pyramidal_Cell.bed \
+    $ runHiDT --hicfile1 testdata/Cortical_L2_5_Pyramidal_Cell.hic \
+           --hicfile2 testdata/Cortical_L6_Pyramidal_Cell.hic \
+           --TADfile testdata/Cortical_L2_5_Pyramidal_Cell.bed \
            --res 50000 \
            --output /path/to/output_results.txt
 ```
