@@ -90,21 +90,19 @@ HiDT requires **two Hi-C files** in `.hic` format representing the two condition
 
 - If your Hi-C data is not in `.hic` format (e.g., `.cool`), you can convert it using [hictk](https://github.com/paulsengroup/hictk) or other tools before running HiDT.
 ## Quick Start
-The pip package includes example data in the `testdata` directory. It contains example data:
+First, download the `testdata` folder from our [GitHub repository](https://github.com/GaoLabXDU/HiDT/tree/main/testdata). It contains example data:
 
 - `Cortical_L2_5_Pyramidal_Cell.hic` and `Cortical_L6_Pyramidal_Cell.hic`: pseudo-bulk Hi-C data for two mouse brain cell subtypes
-
 - `Cortical_L2_5_Pyramidal_Cell.bed`: a corresponding TAD file
 
-You can use these files directly to test HiDT by running the following command:
+After downloading the `testdata` folder, you can use these files to test HiDT by running:
 
 ```text
-    $ runHiDT --hicfile1 testdata/Cortical_L2_5_Pyramidal_Cell.hic \
-           --hicfile2 testdata/Cortical_L6_Pyramidal_Cell.hic \
-           --TADfile testdata/Cortical_L2_5_Pyramidal_Cell.bed \
-           --res 50000 \
-           --output /path/to/output_results.txt
-```
+$ runHiDT --hicfile1 /path/to/testdata/Cortical_L2_5_Pyramidal_Cell.hic \
+          --hicfile2 /path/to/testdata/Cortical_L6_Pyramidal_Cell.hic \
+          --TADfile /path/to/testdata/Cortical_L2_5_Pyramidal_Cell.bed \
+          --res 50000 \
+          --output /path/to/output_results.txt
 ## Output
 The HiDT output file contains four columns:
 
