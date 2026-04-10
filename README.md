@@ -1,6 +1,19 @@
 # HiDT
-**Identification of differential topologically associating domains from low sequencing depth and pseudo-bulk chromatin contact maps.**  
-We present HiDT, a graph neural network-based algorithm with an attention-based, edge-enhanced layer to capture structural differences between TAD graphs. HiDT integrates a depth-specific normalization module and is trained across diverse sequencing depths, enabling robust detection of differential TADs under sparse conditions. Comprehensive benchmarking demonstrates that HiDT consistently outperforms existing methods at both TAD and sub-TAD levels, maintaining accuracy even in datasets with only a few million contacts. By overcoming the limitations of sparse data, HiDT enabled analyses previously difficult in low-coverage datasets. Specifically, we applied it to map TAD reorganization linked to oncogene dysregulation during tumor progression, profile differential TADs associated with transcriptional heterogeneity among cell subtypes in single-cell Hi-C data, and define haplotype-specific TADs associated with allele-specific structural variations.
+HiDT is a method for identifying **differential topologically associating domains (TADs)** between **two Hi-C samples**.
+
+It is particularly recommended for **sparse chromatin contact maps**, especially:
+- **low-sequencing-depth Hi-C data**
+- **pseudo-bulk contact maps**
+
+HiDT can achieve robust performance even under low-coverage conditions, such as:
+- about **5 million intra-chromosomal reads at 25 kb resolution**
+- about **1 million intra-chromosomal reads at 50 kb resolution**
+
+For user reference, we have applied HiDT in several representative scenarios, including:
+- **GM12878 haplotype comparisons**
+- **cell subtype comparisons**
+- **low-sequencing-depth colorectal cancer samples**
+
 ![MainPage](images/mainpage.png)
 # Installation
 ## Install HiDT
@@ -98,5 +111,10 @@ The HiDT output file contains four columns:
 | score  | Differential score computed by HiDT  |
 
 TADs with a **score > 1** are identified as differential TADs.
+
+## Datasets
+All datasets used in HiDT are available at **Zenodo**: [https://doi.org/10.5281/zenodo.19484913](https://doi.org/10.5281/zenodo.19484913).
+
+
 
 
